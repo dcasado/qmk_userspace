@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+#define MASTER_RIGHT
 // Pick good defaults for enabling homerow modifiers
 #define TAPPING_TERM 200
 #define COMBO_COUNT 8
