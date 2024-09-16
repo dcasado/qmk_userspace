@@ -36,7 +36,7 @@ enum combo_events {
   CUT,
   COPY,
   PASTE,
-  SELALL
+  SELALL,
 
   ACUTE,
   DIAE
@@ -136,7 +136,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ES_CIRC, ES_MORD, ES_PIPE, ES_EXLM, ES_IEXL,      KC_NO,   KC_F7, KC_F8, KC_F9, KC_F10,
     ES_TILD, ES_FORD, ES_AMPR, ES_QUES, ES_IQUE,      KC_NO,   KC_F4, KC_F5, KC_F6, KC_F11,
     ES_CCED, ES_PERC, ES_BSLS, ES_LABK, ES_RABK,      KC_PSCR, KC_F1, KC_F2, KC_F3, KC_F12,
-                                    KC_NO, KC_NO,    KC_ENT, KC_NO  
+                                    KC_NO, KC_NO,    KC_ENT, KC_NO
   ),
 
   [_SYM1] = LAYOUT(
@@ -164,6 +164,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ES_CIRC, ES_UNDS, KC_TRNS, ES_EURO, ES_HASH,      KC_TRNS, KC_BTN1, KC_MS_U, KC_BTN3, KC_BTN2,
     ES_GRV,  ES_TILD, ES_BSLS, ES_PIPE, ES_AMPR,      KC_TRNS, KC_MS_L, KC_MS_D, KC_MS_R, KC_TRNS,
     ES_IQUE, ES_IEXL, KC_TRNS, ES_CCED, ES_MORD,      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-                                KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS  
+                                KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS
   )
 };
