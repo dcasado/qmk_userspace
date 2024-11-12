@@ -12,12 +12,10 @@
 
 enum ferris_layers {
   _COLEMAKDH,
-  _SYM_NEW,
-  _SYM2_NEW,
-  _SYM1,
+  _SYM,
+  _SYM2,
   _NAV,
   _FUNC,
-  _SYM2,
 };
 
 enum ferris_tap_dances {
@@ -122,28 +120,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_Q,  KC_W,  KC_F,  KC_P,  KC_B,      KC_J,  KC_L,  KC_U,     KC_Y,    ES_NTIL,
     KC_A,  KC_R,  KC_S,  KC_T,  KC_G,      KC_M,  KC_N,  KC_E,     KC_I,    KC_O,
     KC_Z,  KC_X,  KC_C,  KC_D,  KC_V,      KC_K,  KC_H,  ES_COMM,  ES_DOT,  ES_MINS,
-                     MO(_NAV), KC_SPC,    KC_LSFT, MO(_SYM_NEW)
+                     MO(_NAV), KC_SPC,    KC_LSFT, MO(_SYM)
   ),
 
-  [_SYM_NEW] = LAYOUT(
+  [_SYM] = LAYOUT(
     ES_QUOT,  ES_LPRN,  ES_RPRN,  ES_COLN,  ES_DLR,       ES_SLSH,  KC_7,  KC_8,  KC_9,  ES_MINS,
     ES_DQUO,  ES_LCBR,  ES_RCBR,  ES_SCLN,  ES_AT,        ES_ASTR,  KC_4,  KC_5,  KC_6,  ES_PLUS,
     ES_GRV,   ES_LBRC,  ES_RBRC,  ES_EQL,   ES_HASH,      KC_0,     KC_1,  KC_2,  KC_3,  ES_DOT,
-                            MO(_SYM2_NEW), MO(_FUNC),    KC_TRNS, KC_TRNS
+                            MO(_SYM2), MO(_FUNC),    KC_TRNS, KC_TRNS
   ),
 
-  [_SYM2_NEW] = LAYOUT(
+  [_SYM2] = LAYOUT(
     ES_CIRC, ES_MORD, ES_PIPE, ES_EXLM, ES_IEXL,      KC_NO,   KC_F7, KC_F8, KC_F9, KC_F10,
     ES_TILD, ES_FORD, ES_AMPR, ES_QUES, ES_IQUE,      KC_NO,   KC_F4, KC_F5, KC_F6, KC_F11,
     ES_CCED, ES_PERC, ES_BSLS, ES_LABK, ES_RABK,      KC_PSCR, KC_F1, KC_F2, KC_F3, KC_F12,
                                     KC_NO, KC_NO,    KC_ENT, KC_NO
-  ),
-
-  [_SYM1] = LAYOUT(
-    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,         KC_6,   KC_7,    KC_8,    KC_9,    KC_0,
-    ES_LABK, ES_PERC, ES_LPRN, ES_LCBR, ES_LBRC,      ES_EQL, ES_QUES, ES_QUOT, ES_PLUS, ES_ASTR,
-    ES_RABK, ES_DLR,  ES_RPRN, ES_RCBR, ES_RBRC,      ES_AT,  ES_EXLM, ES_DQUO, ES_SCLN, ES_SLSH,
-                            MO(_FUNC), MO(_SYM2),    KC_TRNS, KC_TRNS
   ),
 
   [_NAV] = LAYOUT(
@@ -158,12 +149,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,      KC_F11,  KC_F12,  KC_PSCR, KC_TRNS, KC_TRNS,
     KC_TRNS,       KC_TRNS,       KC_TRNS,       KC_TRNS,       KC_TRNS,            KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
                                                               KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS
-  ),
-
-  [_SYM2] = LAYOUT(
-    ES_CIRC, ES_UNDS, KC_TRNS, ES_EURO, ES_HASH,      KC_TRNS, KC_BTN1, KC_MS_U, KC_BTN3, KC_BTN2,
-    ES_GRV,  ES_TILD, ES_BSLS, ES_PIPE, ES_AMPR,      KC_TRNS, KC_MS_L, KC_MS_D, KC_MS_R, KC_TRNS,
-    ES_IQUE, ES_IEXL, KC_TRNS, ES_CCED, ES_MORD,      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-                                KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS
   )
+
 };
